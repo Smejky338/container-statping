@@ -2,8 +2,9 @@
 
 ## Build Image from Containerfile
 ```
-podman build -t container-dnsmasq .
+podman build -t statping-jenkins .
 ```
+choose Docker image to pull from
 
 ## Run container
 ```
@@ -17,4 +18,9 @@ podman rm -f statping-jenkins
 Host files are contained in /root/statping/, which translates to /app in container.
 
 ## Usage
-Open at [server_ip]:8080 in your browser, credentials should be statping/statping.
+Open at [server_ip]:8080 in your browser
+
+### Adding targets
+Scroll down to grey Dashboard button, login and go to Services->Create.
+
+Username statping, psw the usual, ask #team-perfscale at Ansible Slack if you don't know.
