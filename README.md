@@ -28,3 +28,7 @@ Open at [server_ip]:8080 in your browser
 Scroll down to grey Dashboard button, login and go to Services->Create.
 
 Username statping, psw the usual, ask #team-perfscale at Ansible Slack if you don't know.
+
+## FAQ
+#### My service doesn't work, even though with curl or browser it does, says something about certificates. What to do?
+In the service detail, either uncheck the "Verify SSL" option or check and fill in the Use TLS Cert option.
