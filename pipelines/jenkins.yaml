@@ -34,5 +34,5 @@ spec:
         - name: JENKINS_SECRETS
           value: my-jenkins-credentials
         - name: JOB_PARAMS
-          value: |
-            KONFLUX_SNAPSHOT: $(params.SNAPSHOT)
+          value:
+            - KONFLUX_SNAPSHOT: $(params.SNAPSHOT)
