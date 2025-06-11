@@ -11,6 +11,7 @@ spec:
     - description: 'Snapshot of the konflux application'
       name: SNAPSHOT
       type: string
+      default: "default-value"
   tasks:
     - name: trigger-jenkins-job
       taskRef:
@@ -34,4 +35,7 @@ spec:
         - name: JENKINS_SECRETS
           value: my-jenkins-credentials
         - name: JOB_PARAMS
-          value: ["KONFLUX_SNAPSHOT: $(params.SNAPSHOT)"]
+          value:
+            - "KONFLUX_SNAPSHOT=$(params.SNAPSHOT)"
+
+
