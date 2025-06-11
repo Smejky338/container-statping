@@ -35,4 +35,4 @@ spec:
       value: my-jenkins-credentials
     - name: JOB_PARAMS
       value: |
-      - KONFLUX_SNAPSHOT=$(params.SNAPSHOT)
+        KONFLUX_SNAPSHOT: $(params.SNAPSHOT)
