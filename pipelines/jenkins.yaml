@@ -18,9 +18,9 @@ spec:
         resolver: "git"
         params:
         - name: url
-          value: https://github.com/konflux-ci/tekton-integration-catalog.git
+          value: https://github.com/psturc/tekton-integration-catalog.git
         - name: revision
-          value: main
+          value: KFLUXSPRT-3631
         - name: pathInRepo
           value: tasks/triggers/jenkins/0.1/trigger-jenkins-job.yaml
         # - name: token
