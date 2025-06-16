@@ -11,15 +11,16 @@ spec:
     - description: 'Snapshot of the konflux application'
       name: SNAPSHOT
       type: string
+      default: "default-value"
   tasks:
     - name: trigger-jenkins-job
       taskRef:
         resolver: "git"
         params:
         - name: url
-          value: https://github.com/konflux-ci/tekton-integration-catalog.git
+          value: https://github.com/psturc/tekton-integration-catalog.git
         - name: revision
-          value: main
+          value: KFLUXSPRT-3631
         - name: pathInRepo
           value: tasks/triggers/jenkins/0.1/trigger-jenkins-job.yaml
         # - name: token
@@ -34,4 +35,7 @@ spec:
         - name: JENKINS_SECRETS
           value: my-jenkins-credentials
         - name: JOB_PARAMS
-          value: KONFLUX_SNAPSHOT=$(params.SNAPSHOT)
+          value:
+            - "KONFLUX_SNAPSHOT=$(params.SNAPSHOT)"
+
+
